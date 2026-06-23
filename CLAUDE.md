@@ -2,26 +2,31 @@
 
 Guidance for AI assistants (Claude Code and others) working in this repository.
 
-## Current state
+Keep observation and interpretation on separate levels in this file. The
+sections below are deliberately labelled **Observed** (facts verifiable from the
+repo) vs **Hypothesis** (inference that must be confirmed before acting).
 
-`omega-core` is currently an **empty repository** — it has no commits and no
-tracked files yet (this CLAUDE.md is among the first). There is no source code,
-build system, tests, or CI to document. Do not invent structure or describe
-files that do not exist; verify the actual contents (`git ls-files`) before
-making claims.
+## Observed
 
-## Context within the ecosystem
+- `omega-core` is an **empty repository**: no commits, no tracked files yet
+  (this CLAUDE.md is among the first). Verify with `git ls-files` /
+  `git log` before making any claim.
+- There is no source code, build system, tests, or CI to document.
+- Sibling repos in the same GitHub account (`EmiDob-22`): **`ksdz`** (a working
+  Python spectral-compression engine whose demo module is `omega_16d_quantum.py`
+  and which uses the "OMEGA" brand) and **`EmiDob-22`** (the owner's profile
+  README repo).
 
-This repo belongs to the `EmiDob-22` / **OMEGA** project family. Sibling repos:
+Do not invent structure or describe files that do not exist.
 
-- **`ksdz`** — the KSDZ v4.0 "OMEGA" spectral compression engine (working Python
-  code). Its demo module is named `omega_16d_quantum.py` and uses the "OMEGA"
-  brand, so `omega-core` is most likely intended to host the broader OMEGA
-  system that KSDZ plugs into.
-- **`EmiDob-22`** — the owner's GitHub profile README repo.
+## Hypothesis (unconfirmed)
 
-Treat "OMEGA core" as the probable intent, but confirm scope with the user
-before scaffolding a project here.
+- Given the shared "OMEGA" branding and that `ksdz` plugs into an
+  `omega_16d_quantum` system, `omega-core` *may* be intended to host the broader
+  OMEGA core that KSDZ depends on.
+
+This is inference, not fact. Confirm scope with the user before scaffolding
+anything here; do not let it harden into documented architecture.
 
 ## Conventions to carry over (when code is added)
 
